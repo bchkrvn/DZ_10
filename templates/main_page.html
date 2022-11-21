@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Главная страница
+{% endblock %}
+
+{% block body %}
+    <h2>Список всех кандидатов:</h2>
+    {% for candidat in candidates%}
+        <p><b>Имя кандидата</b> - {{candidat['name']}}</p>
+        <p><b>Позиция кандидата</b> - {{candidat['position']}}</p>
+        <p><b>Навыки:</b> {{candidat['skills']}}</p><br />
+    {% endfor %}
+{% endblock %}

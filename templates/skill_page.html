@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{%block title %}
+Страница с навыками
+{% endblock %}
+
+{%block body %}
+    {% if candidates%}
+        <h2>Список всех кандидатов с навыком "{{skill}}":</h2>
+        {%for candidat in candidates%}
+            <p><b>Имя кандидата</b> - {{candidat['name']}}</p>
+            <p><b>Позиция кандидата</b> - {{candidat['position']}}</p>
+            <p><b>Навыки:</b> {{candidat['skills']}}</p><br />
+        {% endfor %}
+    {% else %}
+        <h2>Кандидаты с навыком "{{skill}}" не найдены! </h2>
+    {% endif %}
+{% endblock %}

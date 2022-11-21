@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{%block title %}
+Информация о кандидате
+{% endblock %}
+
+{%block body %}
+    {%if candidat%}
+        <h3>Информация о кандидате №{{candidat['pk']}}</h3>
+        <img src="{{candidat['picture']}}">
+        <p><b>Имя кандидата</b> - {{candidat['name']}}</p>
+        <p><b>Позиция кандидата</b> - {{candidat['position']}}</p>
+        <p><b>Навыки:</b> {{candidat['skills']}}</p><br />
+    {% else %}
+        <h3>Информация о кандидате №{{number}} не найдена!</h3>
+    {% endif %}
+
+{% endblock %}
