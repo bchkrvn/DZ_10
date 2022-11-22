@@ -21,4 +21,4 @@ def candidat_page(pk):
 @app.route('/skills/<skill>')
 def skills_page(skill):
     candidates = utils.get_by_skill(skill)
-    return render_template('skill_page.html', skill = skill, candidates=candidates)
+    return render_template('skill_page.html', skill=skill, candidates=candidates)
